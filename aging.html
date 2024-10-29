@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services|organic_fertilizers</title>
+        <link rel="stylesheet" href="services.css">
+    </head>
+    <body>
+        <div class="navibar">
+            <ul>
+
+                <li><a href="market_place.php">Market</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="homepage.html">Home</a></li>
+            </ul><br>
+    
+        </div>
+
+        <div id="banner">
+            <div id="banner-text">Welcome to Our Services</div>
+        </div>
+        <div id="Next">
+            <div id="displaying"></div>
+            <div id="prev" class="arrow"><img src="left%20arrow.png"></div>
+            <div id="next" class="arrow"><img src="left-arrow_1.png"></div>
+
+        </div>
+
+        <div class="Organic">
+            <h2>Manure Aging Guide</h2>
+            <ol>
+                <li>What is Manure Aging?</li>
+                <ul>
+                    <li>The process of allowing animal manure to decompose and stabilize over time before it is applied to soil.</li>
+                </ul>
+                <li>Benefits.</li>
+                <ul>
+                    <li>Reduces pathogens and weed seeds, making it safer for plants and soil.</li>
+                    <li>Improves nutrient availability for crops.</li>
+                    <li>Enhances soil structure and moisture retention.</li>
+                </ul>
+                <li>Application</li>
+                <ul>
+                    <li>Use aged manure as a soil amendment or fertilizer to boost soil health.</li>
+                </ul>
+            </ol>
+
+           <button id="Compost">Start Composting</button>
+        </div>
+        <div id="procedure">
+            <div class="procedure">
+                <h2>Procedure for Aging Manure</h2>
+
+                <!-- Step 1 -->
+                <div class="step">
+                    <img src="">
+                    <h3>Step 1: Collect Fresh Manure</h3>
+                    <p>Gather fresh manure from livestock, ensuring it is free from contaminants and weeds.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step">
+                    <h3>Step 2: Choose a Location</h3>
+                    <p>Select a shaded area away from water sources to prevent runoff and contamination.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step">
+                    <h3>Step 3: Create a Manure Pile</h3>
+                    <p>Build a pile using layers of manure, allowing for airflow to aid decomposition.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step">
+                    <h3>Step 4: Monitor Temperature</h3>
+                    <p>Check the temperature of the pile; it should reach 130-150°F (54-65°C) to kill pathogens.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step">
+                    <h3>Step 5: Turn the Pile</h3>
+                    <p>Turn the manure pile every few weeks to promote even decomposition and reduce odor.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step">
+                    <h3>Step 6: Allow to Age</h3>
+                    <p>Let the manure age for 6 months to a year to ensure it is safe for plants and reduces pathogens.</p>
+                </div>
+            </div>
+            <img src="up-arrow.png" id="scrollToTop" title="Scroll to Top">
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+    
+                <div class="footer-section contact-us">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> fst-014-21@must.ac.mw</p>
+                    <p><strong>Cell:</strong> +265-999-936-164</p>
+                    <p><strong>Address:</strong> 111 Nansadi street, Goliati </p>
+                </div>
+        
+                <div class="footer-section support">
+                    <h3>Support Us</h3>
+                    <ul>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section about-us">
+                    <h3>About Us</h3>
+                    <p>We are a sustainable waste management organization focused on turning waste into valuable resources. Our mission is to promote environmental sustainability through innovative waste management solutions.</p>
+                </div>
+        
+                <div class="footer-section terms">
+                    <h3>Terms of Service</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 Designed by Padre <span>😎</span> | All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        const data = [
+            {
+             image: 'Dung.jpg',
+             text: 'Explore how you can turn wastes into <br> valuable resources!!'
+             },
+            {
+                image: 'organic.jpg',
+                text: 'Organic Fertilizers'
+            },
+
+        ];
+
+        let currentIndex = 0;
+        const banner = document.getElementById('banner');
+        const bannerText = document.getElementById('banner-text');
+
+        function changeBackground(){
+            banner.style.setProperty('--banner-image', `url(${data[currentIndex].image})`);
+            bannerText.innerHTML = data[currentIndex].text;
+            currentIndex = (currentIndex + 1)% data.length;
+        }
+        window.onload = function(){
+            changeBackground();
+            setInterval(changeBackground, 5000);
+        }
+
+
+        const services = [
+            {
+                name: "Organic Fertilizers",
+                link: "organic.html" // Link to the service page
+            },
+            {
+                name: "Biogas Production",
+                link: "biogas.html" // Link to the service page
+            },
+            {
+                name: "Manure Aging",
+                link: "aging.html" // Link to the service page
+            },
+            {
+                name: "Composting-Wastes",
+                link: "compost.html" // Link to the service page
+            }
+        ];
+
+        let Index = 0; // Track the current service index
+        const displayingDiv = document.getElementById('displaying');
+
+        // Function to update the displayed service
+        function updateDisplay() {
+            const service = services[Index];
+            displayingDiv.innerHTML = `<a href= "${service.link}"  class="active">${service.name}</a>`;
+        }
+
+        // Function to go to the next service
+        function nextService() {
+            Index = (Index + 1) % services.length; // Cycle to the next index
+            updateDisplay(); // Update the display
+        }
+
+        // Function to go to the previous service
+        function prevService() {
+            Index = (Index - 1 + services.length) % services.length; // Cycle to the previous index
+            updateDisplay(); // Update the display
+        }
+
+        // Event listeners for the arrow buttons
+        document.getElementById('next').addEventListener('click', nextService);
+        document.getElementById('prev').addEventListener('click', prevService);
+
+        // Initialize the display with the first service
+        updateDisplay();
+
+
+        var Compostingbtn = document.getElementById('Compost');
+        var procedureSection = document.getElementById('procedure');
+
+        Compostingbtn.addEventListener('click', function() {
+            // Show the procedure section
+            procedureSection.style.display = 'block';
+
+            // Hide the button
+            Compostingbtn.style.display = 'none';
+        });
+
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</html>

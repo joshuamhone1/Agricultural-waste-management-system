@@ -1,0 +1,128 @@
+body, html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif; 
+    height:100%;
+    background: linear-gradient(135deg, #052e45, #0e7a99);
+}
+#mcontainer{
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    width: 60%;
+    margin-left: 300px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+.container1{
+    background-color:#1E2D25;
+    height: 100%;
+    width: 30%; 
+      
+}
+.container1 h2{
+    color:white;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 35px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bolder;
+}
+.container1 h2 span{
+    color:#2E7D32;
+
+}
+
+.container2{
+    background-color: #1E5B5A;
+    height: 100%;
+    width: 70%; 
+      
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.login h1{
+    color: white;
+    padding-bottom: 30px;
+
+}
+.login input{
+    border-radius: 60px;
+    width:373px;
+    height: 30px;
+    padding: 15px 20px 15px 70px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.315);
+    color: white;
+    font-size: 20px;
+}
+.username-input i{
+    position: absolute;
+    left: 662px;
+    top: 41%;
+    transform: translateY(-56%);
+    color: #b0bec5;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 15px;
+    background-color: white;
+
+}
+.password-input i{
+    position: absolute;
+    left: 1069px;
+    transform: translateY(-3%);
+    color: #b0bec5;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 15px;
+    background-color: white;
+
+}
+.login button{
+    height: 50px;
+    border-radius: 60px;
+    width:400px;
+    padding:10px;
+    color: #083750;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    font-size:20px ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+    background-color: #ccc;
+    transition: background-color 0.7s ease;
+}
+.login input::placeholder{
+    color: #b1c1d0;
+    font-size: large;
+}
+.login input:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #b0bec5;
+
+}
+
+.username-input{
+    padding-bottom: 40px;
+    
+}
+.password-input{
+    padding-bottom: 66px;
+}
+a{
+    color: white;
+}

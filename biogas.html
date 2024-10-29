@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services| Biogas</title>
+        <link rel="stylesheet" href="services.css">
+    </head>
+    <body>
+        <div class="navibar">
+            <ul>
+                <li><a href="market_place.php">Market</a></li>
+                <li><a href="organic.html">Service</a></li>
+                <li><a href="homepage.html">Home</a></li>
+            </ul><br>
+        </div>
+
+        <div id="banner">
+            <div id="banner-text">Welcome to Our Services</div>
+        </div>
+        <div id="Next">
+            <div id="displaying"></div>
+            <div id="prev" class="arrow"><img src="left%20arrow.png"></div>
+            <div id="next" class="arrow"><img src="left-arrow_1.png"></div>
+
+        </div>
+
+        <div class="Organic">
+            <h2>Biogas Production Guide</h2>
+        <ol>
+            <li>What is Biogas?</li>
+            <ul>
+                <li>A renewable energy source produced from the anaerobic digestion of organic materials.</li>
+            </ul>
+            <li>Benefits of Biogas.</li>
+            <ul>
+                <li>Reduces greenhouse gas emissions.</li>
+                <li>Provides renewable energy for cooking, heating, and electricity.</li>
+            </ul>
+            <li>Applications of Biogas</li>
+            <ul>
+                <li>Utilized for cooking, heating, and electricity generation.</li>
+            </ul>
+        </ol>
+
+           <button id="Compost">Start Composting</button>
+        </div>
+        <div id="procedure">
+            <div class="procedure">
+                <h2>Procedure for Producing Biogas</h2>
+
+                <!-- Step 1 -->
+                <div class="step">
+                    <h3>Step 1: Collect Organic Waste</h3>
+                    <p>Gather organic waste materials such as food scraps, agricultural residues, and animal manure.</p>
+                </div>
+    
+                <!-- Step 2 -->
+                <div class="step">
+                    <h3>Step 2: Shred Organic Materials</h3>
+                    <p>Shred the collected organic materials into smaller pieces to facilitate the digestion process.</p>
+                </div>
+    
+                <!-- Step 3 -->
+                <div class="step">
+                    <h3>Step 3: Prepare the Anaerobic Digester</h3>
+                    <p>Set up an anaerobic digester to create a controlled environment for the decomposition process.</p>
+                </div>
+    
+                <!-- Step 4 -->
+                <div class="step">
+                    <h3>Step 4: Add Organic Waste to the Digester</h3>
+                    <p>Introduce the shredded organic waste into the anaerobic digester along with water to create a slurry.</p>
+                </div>
+    
+                <!-- Step 5 -->
+                <div class="step">
+                    <h3>Step 5: Seal the Digester</h3>
+                    <p>Seal the digester to create an oxygen-free environment necessary for anaerobic bacteria to thrive.</p>
+                </div>
+    
+                <!-- Step 6 -->
+                <div class="step">
+                    <h3>Step 6: Monitor the Digestion Process</h3>
+                    <p>Regularly monitor the temperature and pH levels in the digester to ensure optimal conditions for gas production.</p>
+                </div>
+    
+                <!-- Step 7 -->
+                <div class="step">
+                    <h3>Step 7: Collect Biogas</h3>
+                    <p>Once digestion is complete, collect the produced biogas from the digester through the outlet pipe.</p>
+                </div>
+    
+                <!-- Step 8 -->
+                <div class="step">
+                    <h3>Step 8: Utilize Biogas</h3>
+                    <p>Use the collected biogas for cooking, heating, or generating electricity, reducing dependence on fossil fuels.</p>
+                </div>
+    
+                <!-- Step 9 -->
+                <div class="step">
+                    <h3>Step 9: Use Digestate</h3>
+                    <p>The leftover material from the digester, known as digestate, can be used as a nutrient-rich fertilizer for crops.</p>
+                </div>
+            </div>
+            <img src="up-arrow.png" id="scrollToTop" title="Scroll to Top">
+        </div>
+    
+        <footer class="footer">
+            <div class="footer-container">
+    
+                <div class="footer-section contact-us">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> fst-014-21@must.ac.mw</p>
+                    <p><strong>Cell:</strong> +265-999-936-164</p>
+                    <p><strong>Address:</strong> 111 Nansadi street, Goliati </p>
+                </div>
+        
+                <div class="footer-section support">
+                    <h3>Support Us</h3>
+                    <ul>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Become a Partner</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section about-us">
+                    <h3>About Us</h3>
+                    <p>We are a sustainable waste management organization focused on turning waste into valuable resources. Our mission is to promote environmental sustainability through innovative waste management solutions.</p>
+                </div>
+        
+                <div class="footer-section terms">
+                    <h3>Terms of Service</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 Designed by Padre <span>😎</span> | All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        const data = [
+            {
+             image: 'Dung.jpg',
+             text: 'Explore how you can turn wastes into <br> valuable resources!!'
+             },
+            {
+                image: 'organic.jpg',
+                text: 'Organic Fertilizers'
+            },
+
+        ];
+
+        let currentIndex = 0;
+        const banner = document.getElementById('banner');
+        const bannerText = document.getElementById('banner-text');
+
+        function changeBackground(){
+            banner.style.setProperty('--banner-image', `url(${data[currentIndex].image})`);
+            bannerText.innerHTML = data[currentIndex].text;
+            currentIndex = (currentIndex + 1)% data.length;
+        }
+        window.onload = function(){
+            changeBackground();
+            setInterval(changeBackground, 5000);
+        }
+
+
+        const services = [
+            {
+                name: "Organic Fertilizers",
+                link: "organic.html" // Link to the service page
+            },
+            {
+                name: "Biogas Production",
+                link: "biogas.html" // Link to the service page
+            },
+            {
+                name: "Manure Aging",
+                link: "aging.html" // Link to the service page
+            },
+            {
+                name: "Composting-Wastes",
+                link: "compost.html" // Link to the service page
+            }
+        ];
+
+        let Index = 0; // Track the current service index
+        const displayingDiv = document.getElementById('displaying');
+
+        // Function to update the displayed service
+        function updateDisplay() {
+            const service = services[Index];
+            displayingDiv.innerHTML = `<a href= "${service.link}"  class="active">${service.name}</a>`;
+        }
+
+        // Function to go to the next service
+        function nextService() {
+            Index = (Index + 1) % services.length; // Cycle to the next index
+            updateDisplay(); // Update the display
+        }
+
+        // Function to go to the previous service
+        function prevService() {
+            Index = (Index - 1 + services.length) % services.length; // Cycle to the previous index
+            updateDisplay(); // Update the display
+        }
+
+        // Event listeners for the arrow buttons
+        document.getElementById('next').addEventListener('click', nextService);
+        document.getElementById('prev').addEventListener('click', prevService);
+
+        // Initialize the display with the first service
+        updateDisplay();
+
+
+        var Compostingbtn = document.getElementById('Compost');
+        var procedureSection = document.getElementById('procedure');
+
+        Compostingbtn.addEventListener('click', function() {
+            // Show the procedure section
+            procedureSection.style.display = 'block';
+
+            // Hide the button
+            Compostingbtn.style.display = 'none';
+        });
+
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,273 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0%;
+}
+#banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--banner-image);
+    filter: blur(4px); /* Apply blur only to the background */
+    z-index: 1; /* Place background below text */
+    transition: background-image 1s ease-in-out;
+}
+
+#banner-text {
+    position: absolute;
+    z-index: 2; /* Keep text above the background */
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+.navibar{
+    background-color: #092f18;
+    height: 130px;;
+
+}
+
+
+.navibar ul li {
+    display: inline;
+    margin-right: 10px;
+    float: right;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin: 25px;
+}
+
+.navibar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.navibar ul li a:hover{
+    color: yellowgreen;
+
+}
+
+.navibar input:active{
+    border: 2px green solid;
+}
+
+.arrow {
+height: 30px;
+display: inline-block;
+font-size: 2rem;
+cursor: pointer;
+font-size: 50px;
+font-weight: bolder;
+color: rgb(12, 29, 14);
+position: absolute;
+top: 80%;
+transform: translateY(-50%);
+z-index: 3; 
+user-select: none;
+}
+
+.arrow:hover{
+    color: yellowgreen;
+}
+
+#prev {
+left: 70px;
+}
+
+#next {
+right: 70px;
+}
+
+/* Service display area */
+#displaying {
+text-align: center;
+font-size: 1.5rem;
+color: white;
+cursor: pointer;
+width: 220px;
+border-radius: 5px;
+margin: auto;
+margin-top: 30px;
+background-color: rgb(9, 100, 9);
+}
+#displaying:hover{
+background-color: yellowgreen;
+}
+
+.active {
+color: white;
+font-weight: bold; 
+}
+a{
+text-decoration: none;
+}
+button{
+    background-color: green;
+    margin-left: 525px;
+    border: none;
+    width: 250px;
+    border-radius: 5px;
+}
+button a{
+    color: white;
+    font-size: 15px;
+    
+}
+
+button:hover{
+    color: white;
+    font-size: 15px;
+    background-color: yellowgreen;
+}
+h2{
+    color: green;
+    margin-left: 520px;
+}
+
+.Organic{
+    width: 1300px;
+    margin: auto;
+    margin-top: 5px;
+    background-color: #88b04b;
+    border-radius: 6px;
+    color: black;
+    padding: 5px;
+}
+#procedure {
+    display: none;
+}
+
+#banner {
+    background-size: cover;
+}
+
+.procedure {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+.step {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e7f3d4;
+    border-left: 5px solid #88b04b;
+    border-radius: 5px;
+}
+.step h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #5a8b2d;
+}
+.step p {
+    font-size: 16px;
+    color: #333;
+}
+.step img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: 15px;
+    margin-top: 0px;
+    border-radius: 8px;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.footer {
+    margin-top: 30px;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #00aa4f;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 30px;
+}
+
+.footer-bottom span {
+    color: #00aa4f; 
+}
